@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-
-
 export default function RandomColor() {
     const [typeOfColor, setTypeOfColor] = useState('hex');
     const [color, setColor] = useState('#000000');
@@ -30,7 +28,7 @@ export default function RandomColor() {
     }, []);
 
     useEffect(() => {
-        if(typeOfColor === 'hex') {
+        if (typeOfColor === 'hex') {
             handleCreateRandomHexColor()
         } else {
             handleCreateRandomRgbColor()
@@ -59,7 +57,7 @@ export default function RandomColor() {
                 <h3>{typeOfColor === 'rgb' ? 'RGB Color' : "HEX Color"}</h3>
                 <h1>{color}</h1>
             </div>
-                
+
         </div>
     );
 }
